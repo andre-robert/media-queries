@@ -1,10 +1,14 @@
 body {
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 .page-wrapper {
+    /*background: black;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*width: 500px;*/
 
 }
 .alert-info {
@@ -16,17 +20,13 @@ body {
 }
 
 h1 {
-font-size: 60px;
+    font-size: 60px;
     margin: .2em;
 }
 
 ul {
     list-style: none;
     padding: 0;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
 
 }
 
@@ -36,7 +36,6 @@ li {
     margin: .5em;
     height: 52px;
     width: 371px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,9 +43,9 @@ li {
 
 }
 
-img {
-    height: 224px;
-    width: 339px;
+.header-img {
+    /*height: 224px;*/
+    width: 100%;
 }
 
 p {
@@ -61,5 +60,95 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    position: relative;
 }
 
+@media screen and (min-width: 798px) {
+
+    body {
+        /*background: red;*/
+    }
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .alert-info {
+        display: none;
+    }
+    h1 {
+        text-align: left;
+        font-size: 3em;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        /*padding: 0;*/
+
+    }
+
+    li {
+        background: none;
+        /*text-align: center;*/
+        /*margin: .5em;*/
+        /*height: 52px;*/
+        width: 5em;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+
+    }
+
+    .header-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .paragraphs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /*flex-flow: row wrap;*/
+        align-items: stretch;
+    }
+
+    section {
+        margin: 1em;
+    }
+
+    /*#main {*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+        /*justify-content: space-around;*/
+        /*flex-flow: row wrap;*/
+        /*align-items: stretch;*/
+    }
+
+    .main {
+        flex-grow: 2;
+    }
+
+    .sub-section {
+        flex-grow: 1;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        /*justify-content: flex-start;*/
+        margin-bottom: 5em;
+        align-items: flex-start;
+    }
+
+}
